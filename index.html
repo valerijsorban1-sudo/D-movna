@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fff9f2">
+<meta name="description" content="Dřímovna — radost z domova, hebké maličkosti a přátelský obchod s povlečením. Neveřejná ukázka připravovaného e-shopu.">
+<meta name="robots" content="noindex,nofollow"><title>Dřímovna · Spalo se ti dobře?</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+<div class="announcement">Tady se zabydluje radost z domova. <strong>Dřímovna se chystá ♡</strong> <span class="demo-badge">DEMO</span></div>
+<header class="header">
+<div class="container nav">
+  <a class="logo" href="#domu" data-nav="home" aria-label="Dřímovna — domů"><span class="logo-icon">☾</span><span>dřímovna</span></a>
+  <div class="searchbar" id="searchbar">
+    <label class="sr-only" for="query">Hledat produkty, materiály a rozměry</label>
+    <span class="search-mag" aria-hidden="true">⌕</span>
+    <input id="query" type="search" autocomplete="off" placeholder="Co hledáš? Třeba povlečení 140 × 200…" aria-controls="search-suggestions" aria-expanded="false">
+    <button type="button" class="search-submit" data-action="submit-search">Hledat</button>
+    <div id="search-suggestions" class="search-suggestions" hidden></div>
+  </div>
+  <div class="head-actions">
+    <button type="button" class="iconbtn" data-action="favorites" aria-label="Oblíbené">♡<span class="bubble" id="favorite-count" hidden>0</span></button>
+    <button type="button" class="iconbtn" data-action="cart" aria-label="Košík">♧<span class="bubble" id="cart-count">0</span></button>
+    <button type="button" class="iconbtn menu-toggle" data-action="menu" aria-label="Otevřít nabídku">☰</button>
+  </div>
+</div>
+<nav class="primary-nav container nav-categories" aria-label="Hlavní navigace">
+  <a href="#produkty" data-category="Povlečení">Povlečení</a>
+  <a href="#produkty" data-category="Prostěradla">Prostěradla</a>
+  <a href="#produkty" data-category="Deky">Deky</a>
+  <a href="#produkty" data-category="Pro nejmenší">Pro nejmenší</a>
+  <a href="#o-nas" data-nav="about">Náš příběh</a>
+  <a href="#kontakt" data-nav="contact">Ozvi se nám</a>
+</nav>
+<nav id="mobile-nav" class="mobile-nav" aria-label="Mobilní navigace" hidden>
+  <a href="#produkty" data-nav="catalog">Prohlédnout kolekce</a>
+  <a href="#produkty" data-category="Povlečení">Povlečení</a>
+  <a href="#produkty" data-category="Prostěradla">Prostěradla</a>
+  <a href="#produkty" data-category="Deky">Deky</a>
+  <a href="#produkty" data-category="Pro nejmenší">Pro nejmenší</a>
+  <a href="#o-nas" data-nav="about">Náš příběh</a>
+  <a href="#kontakt" data-nav="contact">Ozvi se nám</a>
+</nav>
+</header>
+<main>
+<div id="home-view"><div class="container">
+<section class="hero" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow">Malé radosti pro velkou pohodu</p><h1 id="hero-title" class="serif">Spalo se ti <em>dobře?</em></h1><p class="lead">Povlečení, deky a malé radosti, kvůli kterým se budeš těšit domů o trochu víc.</p><button class="btn" type="button" data-nav="collections">Prohlédnout kolekce <span>↗</span></button></div><div class="hero-photo"><img src="assets/kocka.webp" alt="Spící kočka zachumlaná do hebké deky"><span class="hero-badge">DOBRÁ<br>POHODA<br>ZAČÍNÁ<br>DOMA</span><span class="hero-note">Ještě pět minut…</span></div></section>
+<div class="benefits"><div class="benefit"><span>♡</span><div><strong>Pro radost z domova</strong><small>Maličkosti, které dělají velkou pohodu.</small></div></div><div class="benefit"><span>☁</span><div><strong>Vybírej v klidu</strong><small>Nikam tě neženeme. Fakt.</small></div></div><div class="benefit"><span>✳</span><div><strong>Všechno na rovinu</strong><small>Žádné složitosti schované za hvězdičkou.</small></div></div></div>
+<section id="categories"><div class="section-head"><div><p class="eyebrow">Udělej si doma hezky</p><h2 class="serif">Co ti doma chybí?</h2><p>Máme pár tipů. Tvoje postel nám pak poděkuje.</p></div><button type="button" class="text-btn" data-nav="catalog">Prohlédnout vše ↗</button></div><div class="category-grid">
+<button type="button" class="category c1" data-category="Povlečení"><strong class="serif">Povlečení</strong><img src="assets/povleceni.svg" alt="" loading="lazy"><span>Peřina v novém kabátě ↗</span></button>
+<button type="button" class="category c2" data-category="Prostěradla"><strong class="serif">Prostěradla</strong><img src="assets/prosteradla.svg" alt="" loading="lazy"><span>Pěkně od základu ↗</span></button>
+<button type="button" class="category c3" data-category="Deky"><strong class="serif">Deky</strong><img src="assets/deky.svg" alt="" loading="lazy"><span>Zachumlat se? Ano! ↗</span></button>
+<button type="button" class="category c4" data-category="Pro nejmenší"><strong class="serif">Pro nejmenší</strong><img src="assets/detske.svg" alt="" loading="lazy"><span>Na ty největší sny ↗</span></button>
+</div></section>
+<section class="products-section" id="products-section"><div class="section-head"><div><p class="eyebrow">Hebké favority</p><h2 class="serif" id="products-heading">Naše hebkosti</h2><p>Jen se rozhlédni. Nikam nepospícháme.</p></div></div><div class="filterbar"><div class="filters" id="filters"></div><label class="sort-label">Seřadit <select id="sort"><option value="recommended">Doporučené</option><option value="cheapest">Od nejlevnějšího</option><option value="priciest">Od nejdražšího</option></select></label></div><div id="products" class="product-grid"></div><p class="disclaimer">* Produkty, názvy, velikosti a ceny slouží pouze pro ukázku. Ilustrace nejsou fotografie konkrétního zboží. V demu nelze nakupovat.</p></section>
+<section class="story-preview"><div><p class="eyebrow">To jsme my</p><h2 class="serif">Malé radosti.<br>Velké zachumlání.</h2><p>Někdo má nejradši čerstvě povlečenou postel. Někdo deku, čaj a seriál, který už viděl třikrát. Pro takové chvíle vzniká Dřímovna.</p><button class="text-btn" data-nav="about">Poznej Dřímovnu ↗</button></div><div class="story-points"><div><strong>Vybírej bez spěchu.</strong><small>Všechno si v klidu prohlédni.</small></div><div><strong>Ptej se na cokoliv.</strong><small>Odpovíme normálně, lidsky.</small></div><div><strong>Když něco nesedne…</strong><small>…budeme hledat řešení, ne výmluvy.</small></div></div></section>
+<section class="care"><p class="eyebrow">Když potřebuješ poradit</p><h2 class="serif">Vy si zdřímnout můžete.<br>My jsme tu pořád pro vás.</h2><p>Výběr, velikosti, doručení nebo jen malá otázka? Ozvi se nám. Na složitosti nás neužije.</p><button type="button" class="btn btn-white" data-nav="contact">Napiš nám ↗</button></section>
+</div></div>
+<section class="inner-page container" id="info-view" hidden><button type="button" class="back-link" data-nav="home">← Zpátky do Dřímovny</button><p class="eyebrow" id="info-eyebrow">U nás doma</p><h1 class="serif page-title" id="info-title"></h1><div class="info-body" id="info-body"></div></section>
+<section class="inner-page container" id="contact-view" hidden><button type="button" class="back-link" data-nav="home">← Zpátky do Dřímovny</button><p class="eyebrow">Jsme jedno velké ucho</p><h1 class="serif page-title">Tak co máš <em>na srdci?</em></h1><p class="page-lead">Ať už tě zajímá povlečení, doručení nebo něco úplně jiného, napiš nám. Na robotické odpovědi si nepotrpíme.</p><div class="contact-grid"><div class="form-card"><h2 class="serif">Napiš nám pár řádků.</h2><p>Nemusíš psát román. Stačí, když nám řekneš, s čím potřebuješ pomoct.</p><form id="contact-form" name="drimovna-kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="drimovna-kontakt"><p hidden><label>Nech toto pole prázdné <input name="bot-field"></label></p><div class="field-row"><label>Jak ti říkáme? *<input name="name" required autocomplete="name" placeholder="Tvoje jméno" maxlength="100"></label><label>Kam ti odpovíme? *<input type="email" name="email" required autocomplete="email" placeholder="tvuj@email.cz" maxlength="180"></label></div><div class="field-row"><label>S čím pomůžeme? *<select name="topic" required><option value="">Vyber si téma</option><option>Rada s výběrem</option><option>Doprava a platba</option><option>Moje objednávka</option><option>Vrácení nebo reklamace</option><option>Spolupráce</option><option>Něco jiného</option></select></label><label>Telefon (nepovinný)<input type="tel" name="phone" autocomplete="tel" placeholder="+420 …" maxlength="25"></label></div><label>A co nám chceš říct? *<textarea name="message" rows="6" required minlength="10" maxlength="3000" placeholder="Povídej, jsme jedno velké ucho…"></textarea></label><p class="legal-hint">Zprávu použijeme pro vyřízení tvého dotazu. Podrobnosti najdeš v <a href="#soukromi" data-nav="privacy">informacích o zpracování osobních údajů</a>.</p><button type="submit" class="btn">Odeslat zprávu ↗</button><p class="disclaimer">Režim demo: zpráva se neodešle. Při nasazení bude potřeba aktivovat a ověřit doručování formulářů.</p><div id="form-result" role="status" class="form-result" hidden></div></form></div><div class="contact-side"><div class="whatsapp-card"><div class="whats-icon">◉</div><h2 class="serif">Spěcháš? Písni nám.</h2><p>Otevři WhatsApp a napiš nám rovnou. Taková ta příjemná rychlovka.</p><button type="button" class="btn btn-green" data-action="whatsapp">Napsat na WhatsApp ↗</button><p class="disclaimer">Přímý chat aktivujeme, až bude připravené číslo Dřímovny.</p></div><div class="email-card"><h2 class="serif">A radši klasicky?</h2><p>E-mail je pořád dobrý vynález. Napiš nám na:</p><a href="mailto:info@drimovna.cz">info@drimovna.cz ↗</a><p>Odpovíme, jakmile to půjde. I my ale někdy potřebujeme kafe. (Jen občas, fakt.)</p></div><div class="cat-tile"><img src="assets/kocka.webp" alt="Spící kočka v hebké dece"><span>Na zprávy se těšíme.<br>Na budík už míň.</span></div></div></div></section>
+</main>
+<footer class="footer"><div class="container footer-grid"><div class="footer-brand"><a class="logo" href="#domu" data-nav="home"><span class="logo-icon">☾</span>dřímovna</a><p>Pro všechny, kdo milují svůj domov.<br>A těch pět minut navíc.</p><a href="mailto:info@drimovna.cz">info@drimovna.cz</a></div><div><h3>U nás doma</h3><a href="#produkty" data-nav="catalog">Pro všechny hebkosti</a><a href="#o-nas" data-nav="about">Náš příběh</a><a href="#kontakt" data-nav="contact">Kontakt</a><a href="#provozovatel" data-nav="company">Kdo za námi stojí</a></div><div><h3>Aby bylo jasno</h3><a href="#doprava" data-nav="shipping">Doprava a platba</a><a href="#vraceni" data-nav="returns">Vrácení a reklamace</a><a href="#podminky" data-nav="terms">Obchodní podmínky</a><a href="#soukromi" data-nav="privacy">Ochrana soukromí</a><a href="#cookies" data-nav="cookies">Cookies</a></div><div><h3>Provozovatel</h3><p><strong>Valerij Šorban</strong><br>IČO: 14259877<br>Na sypkém 924/3<br>180 00 Praha<br>Česká republika</p><a href="#provozovatel" data-nav="company">Identifikační údaje ↗</a></div></div><div class="container foot-bottom">© 2026 Dřímovna · Pracovní demo · Bez reálných objednávek a plateb.</div></footer>
+<div id="shade" class="shade" hidden></div><aside class="drawer" id="cart-drawer" aria-label="Nákupní košík" aria-modal="true" role="dialog" hidden><div class="drawer-head"><h2 class="serif">Tvůj košík</h2><button type="button" class="round-close" data-action="close">×</button></div><div class="drawer-content" id="cart-lines"></div><div class="drawer-footer"><div class="cart-total"><span>Celkem</span><strong id="cart-total">0 Kč</strong></div><button type="button" class="btn btn-dark full" data-action="checkout">Pokračovat k objednávce →</button><p class="disclaimer">Toto je demo. Nákup a platba jsou vypnuté.</p></div></aside>
+<div id="product-dialog" class="product-dialog" role="dialog" aria-modal="true" aria-label="Detail produktu" hidden><button type="button" class="round-close close-product" data-action="close">×</button><div class="dialog-image"><img id="detail-image" src="assets/povleceni.svg" alt="Ilustrační obrázek produktu"></div><div class="dialog-copy"><p class="eyebrow" id="detail-category"></p><h2 class="serif" id="detail-name"></h2><p id="detail-description"></p><p class="tiny-note">Ukázková nabídka. Skutečný sortiment teprve připravujeme.</p><label>Rozměr<select id="detail-size"></select></label><label>Barva<select id="detail-color"></select></label><label>Počet kusů<select id="detail-quantity"><option value="1">1 kus</option><option value="2">2 kusy</option><option value="3">3 kusy</option><option value="4">4 kusy</option></select></label><div class="detail-footer"><strong id="detail-price"></strong><button type="button" class="btn" data-action="add-detail">Do košíku +</button></div></div></div>
+<div class="toast" id="toast" role="status" hidden></div>
+</div><script src="app.js" defer></script></body></html>
