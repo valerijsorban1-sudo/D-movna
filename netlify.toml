@@ -1,0 +1,8 @@
+[build]
+  publish = "public"
+
+# Root page is localised by Netlify's own edge geolocation.
+# Explicit /cs/ and /en/ URLs bypass geolocation and always work.
+[[edge_functions]]
+  path = "/"
+  function = "locale-router"
